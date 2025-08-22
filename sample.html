@@ -1,14 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smarika Khatri — Personal Profile</title>
+  <meta name="author" content="Smarika Khatri" />
+  <style>
+    :root{
+      --beige: #F5F0E1;
+      --sage: #9AA89A;
+      --sage-dark: #6B8F71;
+      --muted: #6b6b6b;
+      --card-shadow: 0 6px 18px rgba(107,143,113,0.12);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--beige),#fff);color:#222;line-height:1.45}
+    .container{max-width:980px;margin:36px auto;padding:28px}
+
+    header.profile{display:flex;gap:22px;align-items:center;background:rgba(154,168,154,0.08);padding:20px;border-radius:16px;box-shadow:var(--card-shadow)}
+    .avatar{width:140px;height:140px;border-radius:14px;overflow:hidden;flex-shrink:0;background:linear-gradient(135deg,var(--sage),var(--sage-dark));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px}
+    .profile-info{flex:1}
+    .name{font-size:28px;font-weight:700;margin:0}
+    .tag{color:var(--muted);margin-top:6px}
+    .meta{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+    .meta span{background:#fff;padding:6px 10px;border-radius:10px;border:1px solid rgba(0,0,0,0.04);font-size:13px}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:20px}
+
+    .card{background:white;padding:18px;border-radius:12px;box-shadow:var(--card-shadow)}
+    h2{margin:0 0 10px 0;font-size:18px;color:var(--sage-dark)}
+    p{margin:0 0 10px 0}
+
+    /* left column details */
+    .bio{font-size:15px;color:#333}
+    .section{margin-bottom:14px}
+    .skills{display:flex;gap:8px;flex-wrap:wrap}
+    .skill{background:linear-gradient(90deg,var(--sage),var(--sage-dark));color:white;padding:8px 10px;border-radius:10px;font-size:13px}
+
+    .projects ul{list-style:none;padding:0;margin:0}
+    .projects li{padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.04);margin-bottom:8px}
+
+    /* right column */
+    .contact-list{display:flex;flex-direction:column;gap:10px}
+    .contact-item{display:flex;align-items:center;gap:10px}
+    .contact-item a{color:var(--sage-dark);text-decoration:none}
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:900px){
+      main{grid-template-columns:1fr}
+      .avatar{width:110px;height:110px;font-size:22px}
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello this is a sample page on Github.</h1>
-    <h2>This is heading 2</h2>
-    <h3>hello alll okbyeee 3</h3>
-    <p> THis is a paragraph.</p>
+  <div class="container">
+    <header class="profile">
+      <div class="avatar" aria-hidden="true">SK</div>
+      <div class="profile-info">
+        <h1 class="name">Smarika Khatri</h1>
+        <div class="tag">BTech Ed in IT • Student at Kathmandu University School of Education (KUSOED)</div>
+        <div class="meta">
+          <span>Age: 17</span>
+          <span>Formerly: St. Mary's High School</span>
+          <span>Talkative • Fast learner • Workaholic</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section class="card section bio">
+          <h2>About me</h2>
+          <p>Hi  I'm Smarika, a BTech Ed in IT student at KUSOED. I love creating videos, editing, and making content. I'm curious about how technology and education come together, and I enjoy experimenting with small projects and multimedia for my university assignments. I'm energetic, a quick learner, and I like working hard to get things done.</p>
+        </section>
+
+        <section class="card section">
+          <h2>Skills & Interests</h2>
+          <div class="skills">
+            <div class="skill">Video Editing</div>
+            <div class="skill">Content Creation</div>
+            <div class="skill">Digital Marketing</div>
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">Presentation Design</div>
+            <div class="skill">Project Management</div>
+          </div>
+        </section>
+
+        <section class="card section projects">
+          <h2>Projects & Experience</h2>
+          <ul>
+            <li>
+              <strong>University Social Media Manager</strong>
+              <div class="small">Manage KUSOED social presence for BTech Ed in IT content — create short videos, posts, and designs.</div>
+            </li>
+            <li>
+              <strong>EdTech Project — Parent-Teacher Communication Portal (simulation)</strong>
+              <div class="small">Working on a simulation-based project for IT project management class.</div>
+            </li>
+            <li>
+              <strong>Skincare Tutorial Session</strong>
+              <div class="small">Designed a beginner-friendly 1-hour interactive tutorial on customizing skincare routines.</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card section">
+          <h2>Education</h2>
+          <p><strong>BTech Ed in IT</strong> — Kathmandu University School of Education (KUSOED)</p>
+          <p><strong>Completed:</strong> St. Mary's High School</p>
+        </section>
+
+      </div>
+
+      <aside>
+        <div class="card section">
+          <h2>Contact</h2>
+          <div class="contact-list">
+            <div class="contact-item"><span class="small">Email</span><a href="#">youremail@example.com</a></div>
+            <div class="contact-item"><span class="small">Phone</span><a href="#">+977-980-XXXXXXX</a></div>
+            <div class="contact-item"><span class="small">Location</span><div class="small">Kathmandu, Nepal</div></div>
+            <div class="contact-item"><span class="small">Sister</span><div class="small">Sandhya — Nurse (Australia)</div></div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Quick Facts</h2>
+          <p class="small">Very talkative, fast learner, workaholic. Loves making videos and editing. Prefers concise, simple design and practical projects for university classes.</p>
+        </div>
+
+        <div class="card section">
+          <h2>Connect</h2>
+          <p class="small">Add social links here — Instagram, YouTube, GitHub, LinkedIn.</p>
+          <p class="small">Example: <a href="#">instagram.com/yourhandle</a></p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      Built with ❤️ — personal profile — customize freely.
+    </footer>
+  </div>
 </body>
 </html>
